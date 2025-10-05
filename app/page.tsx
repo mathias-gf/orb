@@ -1,16 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import { Download, Users, Zap, Sparkles, ChevronRight } from "lucide-react";
-{
-  /* eslint-disable react/no-unescaped-entities */
-}
+/* eslint-disable react/no-unescaped-entities */
+
 export default function ORBeyondLanding() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-950/40 via-black to-black">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-orange-500/20">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-white font-minecraft">
+          <h1 className="text-2xl font-bold text-orange-400 font-minecraft">
             OR BEYOND
           </h1>
 
@@ -20,29 +19,30 @@ export default function ORBeyondLanding() {
               className="text-gray-300 hover:text-white transition-colors"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
-              Fonctionnalités
+              Features
             </a>
             <a
               href="#download"
               className="text-gray-300 hover:text-white transition-colors"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
-              Télécharger
+              Download
             </a>
             <a
               href="#community"
               className="text-gray-300 hover:text-white transition-colors"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
-              Communauté
+              Community
             </a>
             <button className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-lg transition-colors flex items-center gap-2 font-minecraft">
               <Download size={20} />
-              Télécharger
+              Download
             </button>
           </div>
         </div>
       </nav>
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -55,9 +55,8 @@ export default function ORBeyondLanding() {
                 className="text-xl text-gray-300 mb-8"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
-                Explorez au-delà des limites. Un modpack qui repousse les
-                frontières de Minecraft avec plus de 100 mods soigneusement
-                sélectionnés.
+                Explore beyond limits. A modpack that pushes the boundaries of
+                Minecraft with over 100 carefully selected mods.
               </p>
               <div className="flex gap-4">
                 <button
@@ -65,22 +64,22 @@ export default function ORBeyondLanding() {
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
                   <Download size={24} />
-                  Télécharger maintenant
+                  Download Now
                 </button>
                 <button
                   className="bg-black hover:bg-black text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center gap-2"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
-                  En savoir plus
+                  Learn More
                   <ChevronRight size={20} />
                 </button>
               </div>
             </div>
             <div className="bg-black rounded-2xl p-8 border border-orange-500/30 backdrop-blur">
-              {/* ESPACE POUR IMAGE HERO */}
+              {/* HERO IMAGE PLACEHOLDER */}
               <div className="aspect-video bg-gradient-to-br from-orange-500/20 to-amber-500/20 rounded-lg flex items-center justify-center">
                 <Image
-                  src="/images/pictures/ORB_Menu.png"
+                  src="/images/pictures/tyler.png"
                   alt="OR Beyond Menu"
                   width={1000}
                   height={1000}
@@ -91,31 +90,33 @@ export default function ORBeyondLanding() {
           </div>
         </div>
       </section>
+
       {/* Features Section */}
       <section id="features" className="py-20 px-6 bg-black">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-5xl font-bold text-white text-center mb-16 font-minecraft">
-            FONCTIONNALITÉS
+            FEATURES
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 icon: <Sparkles size={32} />,
-                title: "Magie & Technologie",
+                title: "Magic & Technology",
                 description:
-                  "Combinez magie et technologie avancée pour créer des systèmes uniques",
+                  "Combine magic and advanced technology to create unique systems",
               },
               {
                 icon: <Zap size={32} />,
-                title: "Performances Optimisées",
+                title: "Optimized Performance",
                 description:
-                  "Profitez d'une expérience fluide grâce à nos optimisations",
+                  "Enjoy a smooth experience thanks to our optimizations",
               },
               {
                 icon: <Users size={32} />,
-                title: "Multijoueur",
-                description: "Jouez avec vos amis sur nos serveurs dédiés",
+                title: "Multiplayer",
+                description:
+                  "Play with your friends on Origin Realms with our modpack",
               },
             ].map((feature, idx) => (
               <div
@@ -137,11 +138,12 @@ export default function ORBeyondLanding() {
           </div>
         </div>
       </section>
+
       {/* Showcase Section */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-5xl font-bold text-white text-center mb-16 font-minecraft">
-            DÉCOUVREZ LE PACK
+            DISCOVER THE PACK
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -150,7 +152,7 @@ export default function ORBeyondLanding() {
                 key={item}
                 className="bg-black rounded-xl overflow-hidden border border-orange-500/20 hover:border-orange-500/50 transition-all"
               >
-                {/* ESPACE POUR IMAGES SHOWCASE */}
+                {/* SHOWCASE IMAGE PLACEHOLDER */}
                 <div className="aspect-video bg-gradient-to-br from-orange-500/20 to-amber-500/20 flex items-center justify-center">
                   <p
                     className="text-gray-400"
@@ -161,13 +163,13 @@ export default function ORBeyondLanding() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-2 font-minecraft">
-                    TITRE {item}
+                    TITLE {item}
                   </h3>
                   <p
                     className="text-gray-400"
                     style={{ fontFamily: "Inter, sans-serif" }}
                   >
-                    Description de cette fonctionnalité incroyable du modpack.
+                    Description of this incredible feature of the modpack.
                   </p>
                 </div>
               </div>
@@ -175,17 +177,18 @@ export default function ORBeyondLanding() {
           </div>
         </div>
       </section>
+
       {/* Download Section */}
       <section id="download" className="py-20 px-6 bg-black">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-5xl font-bold text-white mb-8 font-minecraft">
-            PRÊT À JOUER ?
+            READY TO PLAY?
           </h2>
           <p
             className="text-xl text-gray-300 mb-12"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            Téléchargez OR Beyond dès maintenant et commencez votre aventure
+            Download OR Beyond now and start your adventure
           </p>
 
           <div className="bg-black rounded-2xl p-8 border border-orange-500/30 mb-8">
@@ -198,7 +201,7 @@ export default function ORBeyondLanding() {
                   className="text-gray-400"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
-                  Mods inclus
+                  Included Mods
                 </div>
               </div>
               <div>
@@ -209,7 +212,7 @@ export default function ORBeyondLanding() {
                   className="text-gray-400"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
-                  Version Minecraft
+                  Minecraft Version
                 </div>
               </div>
               <div>
@@ -220,7 +223,7 @@ export default function ORBeyondLanding() {
                   className="text-gray-400"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
-                  RAM recommandée
+                  Recommended RAM
                 </div>
               </div>
             </div>
@@ -230,7 +233,7 @@ export default function ORBeyondLanding() {
               style={{ fontFamily: "Inter, sans-serif" }}
             >
               <Download size={28} />
-              Télécharger OR Beyond
+              Download OR Beyond
             </button>
           </div>
 
@@ -242,25 +245,26 @@ export default function ORBeyondLanding() {
           </p>
         </div>
       </section>
+
       {/* Community Section */}
       <section id="community" className="py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-5xl font-bold text-white mb-8 font-minecraft">
-            REJOIGNEZ LA COMMUNAUTÉ
+            JOIN THE COMMUNITY
           </h2>
           <p
             className="text-xl text-gray-300 mb-12"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            Connectez-vous avec des milliers de joueurs du monde entier
+            Connect with thousands of players worldwide
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-black rounded-xl p-8 border border-orange-500/20">
-              {/* Logo Discord */}
+              {/* Discord Logo */}
               <div className="w-20 h-20 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Image
-                  src="/images/Logos/Logo_ORB.png"
+                  src="/images/Logos/Logo_Discord.png"
                   alt="OR Beyond Logo"
                   width={80}
                   height={80}
@@ -274,8 +278,8 @@ export default function ORBeyondLanding() {
                 className="text-gray-400 mb-6"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
-                Rejoignez notre serveur Discord pour discuter, obtenir de l'aide
-                et partager vos créations
+                Join our Discord server to chat, get help, and share your
+                feedback
               </p>
               <a
                 href="https://discord.gg/wf2FgjXPQV"
@@ -284,40 +288,41 @@ export default function ORBeyondLanding() {
                 className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg transition-colors inline-block text-center"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
-                Rejoindre Discord
+                Join Discord
               </a>
             </div>
 
             <div className="bg-black rounded-xl p-8 border border-orange-500/20">
-              {/* ESPACE POUR IMAGE WIKI */}
+              {/* Modrinth Logo */}
               <div className="w-20 h-20 bg-gradient-to-br from-orange-500/20 to-amber-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <p
-                  className="text-gray-400 text-xs"
-                  style={{ fontFamily: "Inter, sans-serif" }}
-                >
-                  [Logo]
-                </p>
+                <Image
+                  src="/images/Logos/Logo_Modrinth_Dark.png"
+                  alt="Modrinth Logo"
+                  width={80}
+                  height={80}
+                  className="rounded-lg"
+                />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4 font-minecraft">
-                WIKI
+                Modrinth
               </h3>
               <p
                 className="text-gray-400 mb-6"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
-                Consultez notre wiki complet pour des guides, tutoriels et
-                informations détaillées
+                Download the latest version of the OR Beyond modpack
               </p>
               <button
                 className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg transition-colors"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
-                Consulter le Wiki
+                Go on Modrinth
               </button>
             </div>
           </div>
         </div>
       </section>
+
       {/* Footer */}
       <footer className="bg-black border-t border-orange-500/20 py-12 px-6">
         <div className="max-w-7xl mx-auto text-center">
@@ -328,7 +333,7 @@ export default function ORBeyondLanding() {
             className="text-gray-400 mb-6"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            Créé avec passion pour la communauté Minecraft
+            Created with passion for the Origin Realms community
           </p>
           <div className="flex gap-6 justify-center text-gray-400">
             <a
@@ -364,13 +369,12 @@ export default function ORBeyondLanding() {
             className="text-gray-500 text-sm mt-8"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            © 2025 OR Beyond. Non affilié à Mojang Studios. and origin realms :p
+            © 2025 OR Beyond. Not affiliated with Mojang Studios or Origin
+            Realms :p
           </p>
         </div>
       </footer>
     </div>
   );
 }
-{
-  /* eslint-enable react/no-unescaped-entities */
-}
+/* eslint-enable react/no-unescaped-entities */

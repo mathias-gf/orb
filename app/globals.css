@@ -29,10 +29,19 @@ body {
   font-family: var(--font-minecraft), monospace;
 }
 
-body {
+/* Curseur global */
+body,
+a,
+button,
+input,
+textarea {
   cursor: url("/images/cursor/cursor.png"), auto;
 }
 
-button:hover {
-  cursor: url("/images/cursor/cursor.png"), pointer;
+/* Facultatif : réappliquer sur hover pour être sûr */
+a:hover,
+button:hover,
+input:hover,
+textarea:hover {
+  cursor: url("/images/cursor/cursor.png"), auto;
 }
