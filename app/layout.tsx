@@ -22,7 +22,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "OR Beyond",
-  description: "Site du modpack OR Beyond",
+  description: "Official website for the Origin Realms Beyond modpack",
 };
 
 export default function RootLayout({
