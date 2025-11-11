@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 const minecraftFive = localFont({
-  src: "../public/fonts/minecraft-five-bold.otf",
+  src: "../public/fonts/MinecraftFive.ttf",
   weight: "700",
   style: "normal",
   variable: "--font-minecraft",
