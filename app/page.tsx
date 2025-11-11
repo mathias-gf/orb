@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { Download, Users, Zap, Sparkles, ChevronRight } from "lucide-react";
@@ -14,31 +16,51 @@ export default function ORBeyondLanding() {
           </h1>
 
           <div className="flex gap-6 items-center">
-            <a
-              href="#features"
+            <button
+              onClick={() =>
+                document
+                  .getElementById("features")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
               className="text-gray-300 hover:text-white transition-colors"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
               Features
-            </a>
-            <a
-              href="#download"
+            </button>
+
+            <button
+              onClick={() =>
+                document
+                  .getElementById("download")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
               className="text-gray-300 hover:text-white transition-colors"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
-              Download
-            </a>
-            <a
-              href="#community"
+              Ready to play?
+            </button>
+
+            <button
+              onClick={() =>
+                document
+                  .getElementById("community")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
               className="text-gray-300 hover:text-white transition-colors"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
               Community
-            </a>
-            <button className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-lg transition-colors flex items-center gap-2 font-minecraft">
+            </button>
+
+            <a
+              href="https://modrinth.com/modpack/origin-realms-beyond"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-lg transition-colors flex items-center gap-2 font-minecraft"
+            >
               <Download size={20} />
               Download
-            </button>
+            </a>
           </div>
         </div>
       </nav>
@@ -55,11 +77,20 @@ export default function ORBeyondLanding() {
                 className="text-xl text-gray-300 mb-8"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
-                Explore beyond limits. A modpack that pushes the boundaries of
-                Minecraft with over 100 carefully selected mods.
+                The Origin Realms Beyond modpack is designed to enhance your
+                Origin Realms experience with improved visuals, performance, and
+                quality-of-life features — all while staying true to the
+                server’s unique gameplay. This modpack ensures a smooth and
+                immersive experience by including optimization mods that make it
+                run better than vanilla Minecraft.
               </p>
               <div className="flex gap-4">
                 <button
+                  onClick={() =>
+                    document
+                      .getElementById("download")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                   className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 flex items-center gap-2"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
@@ -67,6 +98,11 @@ export default function ORBeyondLanding() {
                   Download Now
                 </button>
                 <button
+                  onClick={() =>
+                    document
+                      .getElementById("features")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                   className="bg-black hover:bg-black text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center gap-2"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
@@ -79,7 +115,7 @@ export default function ORBeyondLanding() {
               {/* HERO IMAGE PLACEHOLDER */}
               <div className="aspect-video bg-gradient-to-br from-orange-500/20 to-amber-500/20 rounded-lg flex items-center justify-center">
                 <Image
-                  src="/images/pictures/tyler.png"
+                  src="/images/pictures/ORB_Campaign.png"
                   alt="OR Beyond Menu"
                   width={1000}
                   height={1000}
@@ -102,9 +138,9 @@ export default function ORBeyondLanding() {
             {[
               {
                 icon: <Sparkles size={32} />,
-                title: "Magic & Technology",
+                title: "Beauty & Technology",
                 description:
-                  "Combine magic and advanced technology to create unique systems",
+                  "Combine high-qyality visuals and advanced technology to enhance the game's appearance and create a more immersive experience",
               },
               {
                 icon: <Zap size={32} />,
@@ -114,9 +150,9 @@ export default function ORBeyondLanding() {
               },
               {
                 icon: <Users size={32} />,
-                title: "Multiplayer",
+                title: "Quality of life",
                 description:
-                  "Play with your friends on Origin Realms with our modpack",
+                  "Focus on quality of life improvements to make gameplay easier and more enjoyable",
               },
             ].map((feature, idx) => (
               <div
@@ -152,24 +188,65 @@ export default function ORBeyondLanding() {
                 key={item}
                 className="bg-black rounded-xl overflow-hidden border border-orange-500/20 hover:border-orange-500/50 transition-all"
               >
-                {/* SHOWCASE IMAGE PLACEHOLDER */}
+                {/* SHOWCASE IMAGE */}
                 <div className="aspect-video bg-gradient-to-br from-orange-500/20 to-amber-500/20 flex items-center justify-center">
-                  <p
-                    className="text-gray-400"
-                    style={{ fontFamily: "Inter, sans-serif" }}
-                  >
-                    [Screenshot {item}]
-                  </p>
+                  {item === 1 ? (
+                    <Image
+                      src="/images/pictures/tyler.png"
+                      alt="OR Beyond Showcase 1"
+                      width={1000}
+                      height={562}
+                      className="rounded-lg object-cover"
+                    />
+                  ) : item === 2 ? (
+                    <Image
+                      src="/images/pictures/orb_menu.png"
+                      alt="OR Beyond Showcase 2"
+                      width={1000}
+                      height={562}
+                      className="rounded-lg object-cover"
+                    />
+                  ) : item === 3 ? (
+                    <Image
+                      src="/images/pictures/orb_dark.png"
+                      alt="OR Beyond Showcase 3"
+                      width={1000}
+                      height={562}
+                      className="rounded-lg object-cover"
+                    />
+                  ) : (
+                    <Image
+                      src="/images/pictures/orb_badger.png"
+                      alt="OR Beyond Showcase 4"
+                      width={1000}
+                      height={562}
+                      className="rounded-lg object-cover"
+                    />
+                  )}
                 </div>
+
+                {/* DESCRIPTION */}
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-2 font-minecraft">
-                    TITLE {item}
+                    {item === 1
+                      ? "Immersive World"
+                      : item === 2
+                      ? "Enhanced Interface"
+                      : item === 3
+                      ? "Dark Aesthetic"
+                      : "New Tools!"}
                   </h3>
                   <p
                     className="text-gray-400"
                     style={{ fontFamily: "Inter, sans-serif" }}
                   >
-                    Description of this incredible feature of the modpack.
+                    {item === 1
+                      ? "Explore vibrant landscapes enhanced with new visual depth and lighting that elevate the Origin Realms experience"
+                      : item === 2
+                      ? "A redesigned menu that combines style and clarity for a seamless modded experience"
+                      : item === 3
+                      ? "Experience the unique dark theme overhaul that brings a mysterious and cinematic atmosphere to your adventures"
+                      : "You can now play easily thanks to our well selected quality of life mods"}
                   </p>
                 </div>
               </div>
@@ -228,13 +305,16 @@ export default function ORBeyondLanding() {
               </div>
             </div>
 
-            <button
-              className="bg-orange-600 hover:bg-orange-700 text-white px-12 py-4 rounded-lg text-xl font-semibold transition-all transform hover:scale-105 flex items-center gap-3 mx-auto"
+            <a
+              href="https://modrinth.com/modpack/origin-realms-beyond"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-orange-600 hover:bg-orange-700 text-white px-12 py-4 rounded-lg text-xl font-semibold transition-all transform hover:scale-105 inline-flex items-center gap-3 mx-auto"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
               <Download size={28} />
               Download OR Beyond
-            </button>
+            </a>
           </div>
 
           <p
@@ -256,7 +336,7 @@ export default function ORBeyondLanding() {
             className="text-xl text-gray-300 mb-12"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            Connect with thousands of players worldwide
+            Enjoy playing the best Minecraft experience ;)
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -312,12 +392,15 @@ export default function ORBeyondLanding() {
               >
                 Download the latest version of the OR Beyond modpack
               </p>
-              <button
-                className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg transition-colors"
+              <a
+                href="https://modrinth.com/modpack/origin-realms-beyond"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg transition-colors inline-block text-center"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
                 Go on Modrinth
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -335,42 +418,12 @@ export default function ORBeyondLanding() {
           >
             Created with passion for the Origin Realms community
           </p>
-          <div className="flex gap-6 justify-center text-gray-400">
-            <a
-              href="#"
-              className="hover:text-white transition-colors"
-              style={{ fontFamily: "Inter, sans-serif" }}
-            >
-              Discord
-            </a>
-            <a
-              href="#"
-              className="hover:text-white transition-colors"
-              style={{ fontFamily: "Inter, sans-serif" }}
-            >
-              GitHub
-            </a>
-            <a
-              href="#"
-              className="hover:text-white transition-colors"
-              style={{ fontFamily: "Inter, sans-serif" }}
-            >
-              Wiki
-            </a>
-            <a
-              href="#"
-              className="hover:text-white transition-colors"
-              style={{ fontFamily: "Inter, sans-serif" }}
-            >
-              Support
-            </a>
-          </div>
           <p
-            className="text-gray-500 text-sm mt-8"
+            className="text-gray-500 text-sm mt-2"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            © 2025 OR Beyond. Not affiliated with Mojang Studios or Origin
-            Realms :p
+            © 2025 OR Beyond. Not affiliated with Origin Realms - Made by Snay
+            &lt;3
           </p>
         </div>
       </footer>

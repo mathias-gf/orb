@@ -45,3 +45,9 @@ input:hover,
 textarea:hover {
   cursor: url("/images/cursor/cursor.png"), auto;
 }
+
+/* Globalement */
+body,
+* {
+  user-select: none; /* Désactive la sélection de texte */
+}
